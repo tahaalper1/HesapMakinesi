@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-10dp">
+
+    <EditText
+        android:id="@+id/ikinciSayi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="İkinci Sayıyı Gir"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/sonucText"
+        app:layout_constraintStart_toStartOf="@+id/ilkSayi"
+        app:layout_constraintTop_toBottomOf="@+id/ilkSayi" />
+
+
+    <Button
+        android:id="@+id/bölmeButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="140dp"
+        android:gravity="center"
+        android:text="/"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/carpimButton"
+        app:layout_constraintTop_toBottomOf="@+id/cikarmaButton" />
+
+    <Button
+        android:id="@+id/cikarmaButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/bölmeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toplamButton"
+        app:layout_constraintTop_toBottomOf="@+id/sonucText" />
+
+    <Button
+        android:id="@+id/carpimButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="69dp"
+        android:gravity="center"
+        android:text="x"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bölmeButton"
+        app:layout_constraintEnd_toStartOf="@+id/bölmeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bölmeButton" />
+
+    <Button
+        android:id="@+id/toplamButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="69dp"
+        android:gravity="center"
+        android:text="+"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cikarmaButton"
+        app:layout_constraintEnd_toStartOf="@+id/cikarmaButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cikarmaButton" />
+
+    <EditText
+        android:id="@+id/ilkSayi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="İlk Sayıyı Gir"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ikinciSayi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sonucText"
+        android:layout_width="114dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="49dp"
+        android:gravity="center"
+        android:hint="SONUÇ"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cikarmaButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ikinciSayi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
